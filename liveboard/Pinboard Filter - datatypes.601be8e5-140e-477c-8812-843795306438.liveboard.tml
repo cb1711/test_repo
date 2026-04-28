@@ -281,6 +281,25 @@ liveboard:
     is_mandatory: false
     is_single_value: false
     display_name: ""
+  - column:
+    - TPCH WS::Container
+    oper: in
+    values:
+    - "{null}"
+    - jumbo bag
+    - jumbo box
+    - jumbo can
+    - jumbo jar
+    - lg bag
+    - lg can
+    - sm box
+    - sm can
+    - wrap box
+    - wrap drum
+    - wrap pkg
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
   layout:
     tiles:
     - visualization_id: Viz_1
@@ -317,6 +336,8 @@ liveboard:
   - name: TPCH WS::Customer Region
     type: FILTER
   - name: TPCH WS::the month formula
+    type: FILTER
+  - name: TPCH WS::Container
     type: FILTER
   style:
     style_properties:
