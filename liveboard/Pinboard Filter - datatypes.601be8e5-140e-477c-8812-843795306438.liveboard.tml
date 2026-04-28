@@ -257,6 +257,48 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\",\"linkChangeColorsWithAnomaly\": true}},\"columnProperties\": [{\"columnId\": \"Size\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Month(Commit Date)\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Total Discount\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"218bfdcd-ed28-4f52-a2bd-348d29363227\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"99221110-7463-435c-a867-c7a8160b253f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#2E75F0\"},{\"serieName\": \"2\",\"color\": \"#48D1E0\"},{\"serieName\": \"3\",\"color\": \"#FCC838\"},{\"serieName\": \"4\",\"color\": \"#06BF7F\"},{\"serieName\": \"5\",\"color\": \"#8C62F5\"},{\"serieName\": \"6\",\"color\": \"#FF8142\"},{\"serieName\": \"7\",\"color\": \"#ABC7F9\"},{\"serieName\": \"8\",\"color\": \"#B5ECF2\"},{\"serieName\": \"9\",\"color\": \"#FDE9AF\"},{\"serieName\": \"10\",\"color\": \"#9BE5CB\"},{\"serieName\": \"11\",\"color\": \"#D1C0FB\"},{\"serieName\": \"12\",\"color\": \"#FFCCB3\"},{\"serieName\": \"13\",\"color\": \"#2359B6\"},{\"serieName\": \"14\",\"color\": \"#369FAA\"},{\"serieName\": \"15\",\"color\": \"#BF982A\"},{\"serieName\": \"16\",\"color\": \"#049160\"},{\"serieName\": \"17\",\"color\": \"#6A4ABA\"},{\"serieName\": \"18\",\"color\": \"#C26232\"},{\"serieName\": \"19\",\"color\": \"#71A1F4\"},{\"serieName\": \"20\",\"color\": \"#82DFE9\"},{\"serieName\": \"21\",\"color\": \"#FCD977\"},{\"serieName\": \"22\",\"color\": \"#56D3A8\"},{\"serieName\": \"23\",\"color\": \"#B094F8\"},{\"serieName\": \"24\",\"color\": \"#FFA97E\"},{\"serieName\": \"25\",\"color\": \"#163772\"},{\"serieName\": \"26\",\"color\": \"#22636B\"},{\"serieName\": \"27\",\"color\": \"#785F1A\"},{\"serieName\": \"28\",\"color\": \"#025B3C\"},{\"serieName\": \"29\",\"color\": \"#422E75\"},{\"serieName\": \"30\",\"color\": \"#7A3D1F\"},{\"serieName\": \"31\",\"color\": \"#2E75F0\"},{\"serieName\": \"32\",\"color\": \"#48D1E0\"},{\"serieName\": \"33\",\"color\": \"#FCC838\"},{\"serieName\": \"34\",\"color\": \"#06BF7F\"},{\"serieName\": \"35\",\"color\": \"#8C62F5\"},{\"serieName\": \"36\",\"color\": \"#FF8142\"},{\"serieName\": \"37\",\"color\": \"#ABC7F9\"},{\"serieName\": \"38\",\"color\": \"#B5ECF2\"},{\"serieName\": \"39\",\"color\": \"#FDE9AF\"},{\"serieName\": \"40\",\"color\": \"#9BE5CB\"},{\"serieName\": \"41\",\"color\": \"#D1C0FB\"},{\"serieName\": \"42\",\"color\": \"#FFCCB3\"},{\"serieName\": \"43\",\"color\": \"#2359B6\"},{\"serieName\": \"44\",\"color\": \"#369FAA\"},{\"serieName\": \"45\",\"color\": \"#BF982A\"},{\"serieName\": \"46\",\"color\": \"#049160\"},{\"serieName\": \"47\",\"color\": \"#6A4ABA\"},{\"serieName\": \"48\",\"color\": \"#C26232\"},{\"serieName\": \"49\",\"color\": \"#71A1F4\"},{\"serieName\": \"50\",\"color\": \"#82DFE9\"}]}"
       display_mode: CHART_MODE
     viz_guid: f60fb629-38d6-4f17-864e-835b0be12da9
+  - id: Viz_6
+    answer:
+      name: "Total Discount, Total Extended Price, Total Order Total Price, Total Quantity"
+      tables:
+      - id: TPCH Model With Table Alias
+        name: TPCH Model With Table Alias
+        fqn: b9203fde-9ee4-46aa-b93b-616e4ee75354
+      search_query: "[Discount] [Extended Price] [Order Total Price] [Quantity]"
+      answer_columns:
+      - name: Total Discount
+      - name: Total Extended Price
+      - name: Total Order Total Price
+      - name: Total Quantity
+      table:
+        table_columns:
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        - column_id: Total Order Total Price
+          headline_aggregation: SUM
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Discount
+        - Total Extended Price
+        - Total Order Total Price
+        - Total Quantity
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Discount
+        - column_id: Total Extended Price
+        - column_id: Total Order Total Price
+        - column_id: Total Quantity
+        axis_configs:
+        - "y":
+          - Total Discount
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: e55dfc87-85d7-4d83-9b6c-628536ead6dd
   filters:
   - column:
     - TPCH WS::Category
@@ -366,6 +408,11 @@ liveboard:
       height: 8
       width: 6
     - visualization_id: Viz_5
+      x: 0
+      "y": 16
+      height: 8
+      width: 6
+    - visualization_id: Viz_6
   ordered_chips:
   - name: TPCH WS::Category
     type: FILTER
@@ -388,7 +435,7 @@ liveboard:
     - name: lb_border_type
       value: SHARP
     - name: lb_brand_color
-      value: LBC_E
+      value: LBC_B
     - name: hide_group_title
       value: "false"
     - name: hide_group_description
