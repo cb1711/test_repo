@@ -34,17 +34,14 @@ answer:
     join_path:
     - join:
       - Lineorder PartKey - Part PartKey
-  search_query: "[LINEORDER_1::Revenue] by [PART_1::Brand1] [DATE_1::Year] [DATE_1::Date]"
+  search_query: "[LINEORDER_1::Revenue] by [PART_1::Brand1] [DATE_1::Year]"
   answer_columns:
   - name: Brand1
-  - name: Date
   - name: Total Revenue
   - name: Year
   table:
     table_columns:
     - column_id: Brand1
-      headline_aggregation: COUNT_DISTINCT
-    - column_id: Date
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total Revenue
       headline_aggregation: SUM
@@ -53,7 +50,6 @@ answer:
     ordered_column_ids:
     - Brand1
     - Year
-    - Date
     - Total Revenue
     client_state: "{\"wrapTableHeader\":true}"
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
@@ -61,7 +57,6 @@ answer:
     type: COLUMN
     chart_columns:
     - column_id: Brand1
-    - column_id: Date
     - column_id: Total Revenue
     - column_id: Year
     axis_configs:
@@ -72,7 +67,7 @@ answer:
       color:
       - Year
     client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"db4fec74-733b-493f-beba-eecf7ea2d357\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"52557bbd-7a0f-4b18-800b-91be52dadb67\":{\"linkedColumns\":[\"Brand1\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"1992\":\"#FCC838\",\"1993\":\"#48D1E0\",\"1994\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"Brand1\":{},\"Year\":{},\"Total Revenue\":{}}}"
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\",\"linkChangeColorsWithAnomaly\": true}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"handleNullData\": \"ZERO\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Year\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"handleNullData\": \"ZERO\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"handleNullData\": \"ZERO\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"handleNullData\": \"ZERO\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"handleNullData\": \"ZERO\",\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"0ea673dd-f733-4a64-8467-0269e5368d68\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"ac9db35b-b9d6-45b0-8e12-ebb2bb75a416\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1992\",\"color\": \"#06BF7F\"},{\"serieName\": \"1993\",\"color\": \"#FCD977\"},{\"serieName\": \"1994\",\"color\": \"#FCC838\"},{\"serieName\": \"1995\",\"color\": \"#82DFE9\"},{\"serieName\": \"1996\",\"color\": \"#48D1E0\"},{\"serieName\": \"1997\",\"color\": \"#71A1F4\"},{\"serieName\": \"1998\",\"color\": \"#2E75F0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\",\"linkChangeColorsWithAnomaly\": true}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Year\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"fc990eed-f85b-49d6-bf3e-e46d62930f61\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"82c07441-d141-4798-a56a-1c3b093e8bbc\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"0ea673dd-f733-4a64-8467-0269e5368d68\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"ac9db35b-b9d6-45b0-8e12-ebb2bb75a416\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1992\",\"color\": \"#06BF7F\"},{\"serieName\": \"1993\",\"color\": \"#FCD977\"},{\"serieName\": \"1994\",\"color\": \"#FCC838\"},{\"serieName\": \"1995\",\"color\": \"#82DFE9\"},{\"serieName\": \"1996\",\"color\": \"#48D1E0\"},{\"serieName\": \"1997\",\"color\": \"#71A1F4\"},{\"serieName\": \"1998\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
   client_state: "{\"answerMode\":\"advanced\"}"
   dynamic_name: Copy of Brand Revenue II
