@@ -1,0 +1,74 @@
+guid: 64032a38-a319-4b18-8136-7ba1e8109f51
+answer:
+  name: Copy of Brand Revenue II
+  description: Annual Brand Revenue Table and Revenue Distribution by Brand Column Chart
+  tables:
+  - id: DATE
+    name: DATE
+    fqn: 1c97ce56-e803-41c5-9132-3075425c8b41
+  - id: LINEORDER
+    name: LINEORDER
+    fqn: 2445fe81-30d6-46fa-9f42-f6b1b4e01623
+  - id: PART
+    name: PART
+    fqn: a7fc012e-bdb3-4e75-9ce4-b3f731d90136
+  joins:
+  - id: Lineorder PartKey - Part PartKey
+    name: Lineorder PartKey - Part PartKey
+    source: LINEORDER
+    destination: PART
+  - id: Commit Date - Datekey
+    name: Commit Date - Datekey
+    source: LINEORDER
+    destination: DATE
+  table_paths:
+  - id: DATE_1
+    table: DATE
+    join_path:
+    - join:
+      - Commit Date - Datekey
+  - id: LINEORDER_1
+    table: LINEORDER
+  - id: PART_1
+    table: PART
+    join_path:
+    - join:
+      - Lineorder PartKey - Part PartKey
+  search_query: "[LINEORDER_1::Revenue] by [PART_1::Brand1] [DATE_1::Year]"
+  answer_columns:
+  - name: Brand1
+  - name: Total Revenue
+  - name: Year
+  table:
+    table_columns:
+    - column_id: Brand1
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total Revenue
+      headline_aggregation: SUM
+    - column_id: Year
+      headline_aggregation: COUNT_DISTINCT
+    ordered_column_ids:
+    - Brand1
+    - Year
+    - Total Revenue
+    client_state: "{\"wrapTableHeader\":true}"
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Brand1
+    - column_id: Total Revenue
+    - column_id: Year
+    axis_configs:
+    - x:
+      - Brand1
+      "y":
+      - Total Revenue
+      color:
+      - Year
+    client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"db4fec74-733b-493f-beba-eecf7ea2d357\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"52557bbd-7a0f-4b18-800b-91be52dadb67\":{\"linkedColumns\":[\"Brand1\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"1992\":\"#FCC838\",\"1993\":\"#48D1E0\",\"1994\":\"#2E75F0\"},\"version\":\"V2.1\",\"columnProperties\":{\"Brand1\":{},\"Year\":{},\"Total Revenue\":{}}}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\",\"linkChangeColorsWithAnomaly\": true}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Year\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"0ea673dd-f733-4a64-8467-0269e5368d68\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"ac9db35b-b9d6-45b0-8e12-ebb2bb75a416\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1992\",\"color\": \"#06BF7F\"},{\"serieName\": \"1993\",\"color\": \"#FCD977\"},{\"serieName\": \"1994\",\"color\": \"#FCC838\"},{\"serieName\": \"1995\",\"color\": \"#82DFE9\"},{\"serieName\": \"1996\",\"color\": \"#48D1E0\"},{\"serieName\": \"1997\",\"color\": \"#71A1F4\"},{\"serieName\": \"1998\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
+  client_state: "{\"answerMode\":\"advanced\"}"
+  dynamic_name: Copy of Brand Revenue II
+  dynamic_description: Annual Brand Revenue Table and Revenue Distribution by Brand Column Chart
