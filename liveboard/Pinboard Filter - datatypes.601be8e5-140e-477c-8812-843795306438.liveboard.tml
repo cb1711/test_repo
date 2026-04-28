@@ -214,6 +214,49 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Customer Region\",\"columnProperty\": {}},{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f357b530-0f96-4244-a7bf-2db8a83572c5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"30ff5ebf-347f-4ffb-a5ad-8258723845a8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"africa\",\"color\": \"#e3394a\"},{\"serieName\": \"america\",\"color\": \"#68b8e3\"},{\"serieName\": \"asia\",\"color\": \"#f5cb4e\"},{\"serieName\": \"europe\",\"color\": \"#4074b3\"},{\"serieName\": \"middle east\",\"color\": \"#35b06e\"}]}"
       display_mode: TABLE_MODE
     viz_guid: 16f9166b-d6da-40a2-818f-fb8aa0308361
+  - id: Viz_5
+    answer:
+      name: Total Discount by Monthly Commit Date and Size
+      tables:
+      - id: TPCH Model With Table Alias
+        name: TPCH Model With Table Alias
+        fqn: b9203fde-9ee4-46aa-b93b-616e4ee75354
+      search_query: "[Discount] [Size] [Commit Date] [Commit Date].monthly"
+      answer_columns:
+      - name: Month(Commit Date)
+      - name: Size
+      - name: Total Discount
+      table:
+        table_columns:
+        - column_id: Month(Commit Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Size
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Size
+        - Month(Commit Date)
+        - Total Discount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(Commit Date)
+        - column_id: Size
+        - column_id: Total Discount
+        axis_configs:
+        - x:
+          - Month(Commit Date)
+          "y":
+          - Total Discount
+          color:
+          - Size
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"kpiDisplayProperties\": {\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\",\"linkChangeColorsWithAnomaly\": true}},\"columnProperties\": [{\"columnId\": \"Size\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Month(Commit Date)\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Total Discount\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"kpiColumnProperties\": {\"showSparkline\": true,\"showComparisonDate\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true}}}],\"axisProperties\": [{\"id\": \"218bfdcd-ed28-4f52-a2bd-348d29363227\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"99221110-7463-435c-a867-c7a8160b253f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#2E75F0\"},{\"serieName\": \"2\",\"color\": \"#48D1E0\"},{\"serieName\": \"3\",\"color\": \"#FCC838\"},{\"serieName\": \"4\",\"color\": \"#06BF7F\"},{\"serieName\": \"5\",\"color\": \"#8C62F5\"},{\"serieName\": \"6\",\"color\": \"#FF8142\"},{\"serieName\": \"7\",\"color\": \"#ABC7F9\"},{\"serieName\": \"8\",\"color\": \"#B5ECF2\"},{\"serieName\": \"9\",\"color\": \"#FDE9AF\"},{\"serieName\": \"10\",\"color\": \"#9BE5CB\"},{\"serieName\": \"11\",\"color\": \"#D1C0FB\"},{\"serieName\": \"12\",\"color\": \"#FFCCB3\"},{\"serieName\": \"13\",\"color\": \"#2359B6\"},{\"serieName\": \"14\",\"color\": \"#369FAA\"},{\"serieName\": \"15\",\"color\": \"#BF982A\"},{\"serieName\": \"16\",\"color\": \"#049160\"},{\"serieName\": \"17\",\"color\": \"#6A4ABA\"},{\"serieName\": \"18\",\"color\": \"#C26232\"},{\"serieName\": \"19\",\"color\": \"#71A1F4\"},{\"serieName\": \"20\",\"color\": \"#82DFE9\"},{\"serieName\": \"21\",\"color\": \"#FCD977\"},{\"serieName\": \"22\",\"color\": \"#56D3A8\"},{\"serieName\": \"23\",\"color\": \"#B094F8\"},{\"serieName\": \"24\",\"color\": \"#FFA97E\"},{\"serieName\": \"25\",\"color\": \"#163772\"},{\"serieName\": \"26\",\"color\": \"#22636B\"},{\"serieName\": \"27\",\"color\": \"#785F1A\"},{\"serieName\": \"28\",\"color\": \"#025B3C\"},{\"serieName\": \"29\",\"color\": \"#422E75\"},{\"serieName\": \"30\",\"color\": \"#7A3D1F\"},{\"serieName\": \"31\",\"color\": \"#2E75F0\"},{\"serieName\": \"32\",\"color\": \"#48D1E0\"},{\"serieName\": \"33\",\"color\": \"#FCC838\"},{\"serieName\": \"34\",\"color\": \"#06BF7F\"},{\"serieName\": \"35\",\"color\": \"#8C62F5\"},{\"serieName\": \"36\",\"color\": \"#FF8142\"},{\"serieName\": \"37\",\"color\": \"#ABC7F9\"},{\"serieName\": \"38\",\"color\": \"#B5ECF2\"},{\"serieName\": \"39\",\"color\": \"#FDE9AF\"},{\"serieName\": \"40\",\"color\": \"#9BE5CB\"},{\"serieName\": \"41\",\"color\": \"#D1C0FB\"},{\"serieName\": \"42\",\"color\": \"#FFCCB3\"},{\"serieName\": \"43\",\"color\": \"#2359B6\"},{\"serieName\": \"44\",\"color\": \"#369FAA\"},{\"serieName\": \"45\",\"color\": \"#BF982A\"},{\"serieName\": \"46\",\"color\": \"#049160\"},{\"serieName\": \"47\",\"color\": \"#6A4ABA\"},{\"serieName\": \"48\",\"color\": \"#C26232\"},{\"serieName\": \"49\",\"color\": \"#71A1F4\"},{\"serieName\": \"50\",\"color\": \"#82DFE9\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: f60fb629-38d6-4f17-864e-835b0be12da9
   filters:
   - column:
     - TPCH WS::Category
@@ -322,6 +365,7 @@ liveboard:
       "y": 8
       height: 8
       width: 6
+    - visualization_id: Viz_5
   ordered_chips:
   - name: TPCH WS::Category
     type: FILTER
